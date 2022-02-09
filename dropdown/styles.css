@@ -1,0 +1,18 @@
+.menu-button {
+    border: none;
+    background-color: rgb(63, 180, 83);
+    color: #fff;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.dropdown {
+    background-color: rgb(37, 144, 55);
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    width: 120px;
+    opacity: 0;
+    transition: .2s;
+    display: none;
+}
