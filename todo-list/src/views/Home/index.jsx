@@ -7,7 +7,7 @@ function Home () {
     const [todoList, setTodoList] = useState([])
 
     const list = todoList.map(item => {
-        return (<ListItem title={item} key={item} />)
+        return (<div><ListItem title={item} key={item} /><button onClick={() => deleteItem(item)}>excluir</button></div>)
     })
     return(
         <div className='Home'>
@@ -19,7 +19,14 @@ function Home () {
             {list}
         </div>
     )
+
+    function deleteItem(item) {
+        const newTodoList = todoList.filter(element => element !== item)
+        setTodoList(newTodoList)
+    }
 }
+
+
 
 function submitListName (listName, todoList, setTodoList) {
     setTodoList([listName, ...todoList])
